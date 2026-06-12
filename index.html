@@ -1,0 +1,940 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>LiveSphere</title>
+  <link rel="stylesheet" href="css/style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet"/>
+</head>
+<body>
+
+  <div id="progressBar"></div>
+  <button id="scrollTopBtn" onclick="window.scrollTo({top:0,behavior:'smooth'})">⬆</button>
+
+  <div class="preloader" id="preloader">
+    <div class="preloader-inner">
+      <div class="spinner"></div>
+      <p>🌐 LiveSphere</p>
+    </div>
+  </div>
+
+  <nav class="navbar" id="navbar">
+    <div class="logo">Live<span>Sphere</span></div>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="#home">Home</a></li>
+      <li><a href="#about">About</a></li>
+      <li><a href="#services">Services</a></li>
+      <li><a href="#testimonials">Testimonials</a></li>
+      <li><a href="#portfolio">Portfolio</a></li>
+      <li><a href="#pricing">Pricing</a></li>
+      <li><a href="#faq">FAQ</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+    <div class="nav-right">
+      <button class="theme-toggle" id="themeToggle">🌙 Dark</button>
+      <div class="hamburger" id="hamburger">&#9776;</div>
+    </div>
+  </nav>
+
+  <div class="welcome-banner" id="welcomeBanner">
+    <span id="welcomeMsg">👋 Welcome back!</span>
+    <button onclick="closeWelcomeBanner()" class="banner-close">✕</button>
+  </div>
+
+  <section class="hero" id="home">
+    <div class="hero-slides">
+      <div class="hero-slide slide-1"></div>
+      <div class="hero-slide slide-2"></div>
+      <div class="hero-slide slide-3"></div>
+    </div>
+    <div class="hero-overlay"></div>
+    <div class="hero-content">
+      <div class="hero-badge">🚀 Welcome to the Future</div>
+      <h1>Welcome to <span>LiveSphere</span></h1>
+      <h2 class="typing-wrapper">We Provide <span id="typing-text" class="typing-text"></span><span class="cursor">|</span></h2>
+      <p>A real-life, user-friendly website built with HTML, CSS and JavaScript. Fast, modern and responsive.</p>
+      <div class="hero-btns">
+        <a href="#contact" class="btn">Get Started</a>
+        <a href="#about" class="btn btn-outline">Learn More</a>
+      </div>
+      <div class="clock-box">
+        <div class="clock-item">
+          <span class="clock-icon">📅</span>
+          <span id="live-date">Loading...</span>
+        </div>
+        <div class="clock-divider"></div>
+        <div class="clock-item">
+          <span class="clock-icon">⏰</span>
+          <span id="live-time">Loading...</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="brands-section">
+    <div class="brands-container">
+      <p class="brands-title">120+ BRANDS THAT CHOSE US TO GROW</p>
+      <div class="brands-track-wrap">
+        <div class="brands-track" id="brandsTrack">
+          <div class="brand-item">🏦 Padma Bank</div>
+          <div class="brand-item">🚬 BAT Bangladesh</div>
+          <div class="brand-item">🏗️ DBL Ceramics</div>
+          <div class="brand-item">🤝 BRAC</div>
+          <div class="brand-item">🧪 Bridge Chemie</div>
+          <div class="brand-item">✂️ Clipping Pixel</div>
+          <div class="brand-item">🛍️ Mercari Asia</div>
+          <div class="brand-item">🪑 Oakwood Craft</div>
+          <div class="brand-item">🌸 Sakura</div>
+          <div class="brand-item">🛒 Shopoth</div>
+          <div class="brand-item">✅ ChoreStop</div>
+          <div class="brand-item">💻 CodersTrust</div>
+          <div class="brand-item">🛡️ Guardian</div>
+          <div class="brand-item">🪑 Hatim Furniture</div>
+          <div class="brand-item">🏠 MG Group</div>
+          <div class="brand-item">📦 Pilot Sourcing</div>
+          <div class="brand-item">🚗 RideAlike</div>
+          <div class="brand-item">🏢 Tasia Commercial</div>
+          <div class="brand-item">🏠 DBH</div>
+          <div class="brand-item">🏦 Padma Bank</div>
+          <div class="brand-item">🚬 BAT Bangladesh</div>
+          <div class="brand-item">🏗️ DBL Ceramics</div>
+          <div class="brand-item">🤝 BRAC</div>
+          <div class="brand-item">🧪 Bridge Chemie</div>
+          <div class="brand-item">✂️ Clipping Pixel</div>
+          <div class="brand-item">🛍️ Mercari Asia</div>
+          <div class="brand-item">🪑 Oakwood Craft</div>
+          <div class="brand-item">🌸 Sakura</div>
+          <div class="brand-item">🛒 Shopoth</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="about-section" id="about">
+    <div class="about-container">
+      <div class="about-text fade-in">
+        <div class="section-tag">About Us</div>
+        <h2>We Build Digital <span>Experiences</span></h2>
+        <p>We are a passionate team of developers, designers and digital marketers dedicated to building real-life, user-friendly web solutions for businesses of all sizes.</p>
+        <p>Our mission is to deliver high-quality digital experiences that help our clients grow online and achieve their goals.</p>
+        <div class="about-stats">
+          <div class="stat">
+            <h3 id="count-clients">0</h3>
+            <p>Happy Clients</p>
+          </div>
+          <div class="stat">
+            <h3 id="count-projects">0</h3>
+            <p>Projects Done</p>
+          </div>
+          <div class="stat">
+            <h3 id="count-years">0</h3>
+            <p>Years Experience</p>
+          </div>
+        </div>
+        <a href="#contact" class="btn">Work With Us</a>
+      </div>
+      <div class="about-image fade-in">
+        <div class="image-placeholder">
+          <span>🌐</span>
+          <p>LiveSphere Team</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="services-section" id="services">
+    <div class="services-container">
+      <div class="section-tag">What We Do</div>
+      <h2>Our <span>Services</span></h2>
+      <p class="section-subtitle">Everything you need to grow your business online</p>
+      <div class="cards-grid">
+
+        <div class="card fade-in">
+          <div class="card-icon">🎨</div>
+          <h3>Web Design</h3>
+          <p>Beautiful and modern website designs that attract users and convert visitors into customers.</p>
+          <button class="fav-btn" data-service="Web Design" onclick="toggleFavorite(this)">🤍 Save</button>
+          <a href="#contact" class="card-btn">Learn More →</a>
+        </div>
+
+        <div class="card fade-in">
+          <div class="card-icon">💻</div>
+          <h3>App Development</h3>
+          <p>High performance web and mobile applications built with the latest technologies.</p>
+          <button class="fav-btn" data-service="App Development" onclick="toggleFavorite(this)">🤍 Save</button>
+          <a href="#contact" class="card-btn">Learn More →</a>
+        </div>
+
+        <div class="card fade-in">
+          <div class="card-icon">📈</div>
+          <h3>SEO Optimization</h3>
+          <p>Rank higher on Google and drive more organic traffic to your website.</p>
+          <button class="fav-btn" data-service="SEO Optimization" onclick="toggleFavorite(this)">🤍 Save</button>
+          <a href="#contact" class="card-btn">Learn More →</a>
+        </div>
+
+        <div class="card fade-in">
+          <div class="card-icon">📣</div>
+          <h3>Digital Marketing</h3>
+          <p>Grow your brand online with our expert digital marketing strategies.</p>
+          <button class="fav-btn" data-service="Digital Marketing" onclick="toggleFavorite(this)">🤍 Save</button>
+          <a href="#contact" class="card-btn">Learn More →</a>
+        </div>
+
+        <div class="card fade-in">
+          <div class="card-icon">🔒</div>
+          <h3>Cyber Security</h3>
+          <p>Protect your website and data with our advanced security solutions.</p>
+          <button class="fav-btn" data-service="Cyber Security" onclick="toggleFavorite(this)">🤍 Save</button>
+          <a href="#contact" class="card-btn">Learn More →</a>
+        </div>
+
+        <div class="card fade-in">
+          <div class="card-icon">☁️</div>
+          <h3>Cloud Hosting</h3>
+          <p>Fast, reliable and secure cloud hosting for your website and applications.</p>
+          <button class="fav-btn" data-service="Cloud Hosting" onclick="toggleFavorite(this)">🤍 Save</button>
+          <a href="#contact" class="card-btn">Learn More →</a>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <section class="process-section" id="process">
+    <div class="process-container">
+      <div class="section-tag">How We Work</div>
+      <h2>Transforming Brands with <span>Strategy, AI & Creative Excellence</span></h2>
+      <p class="section-subtitle">We unleash the power of strategy, design, SEO, ads, content, AI and development to create unstoppable campaigns.</p>
+
+      <div class="process-grid">
+
+        <div class="process-card fade-in">
+          <div class="process-step">Step — 01</div>
+          <h3>Understanding Client Requirements & Goals</h3>
+          <p>We start by deeply understanding your business, target audience and goals to build a solid foundation.</p>
+          <div class="process-tag">🎯 Growth Strategy</div>
+        </div>
+
+        <div class="process-card fade-in process-card-center">
+          <div class="process-step">Step — 02</div>
+          <h3>Conducting Market Research & Planning Strategy</h3>
+          <p>Deep market research and competitor analysis to craft a winning strategy tailored for your brand.</p>
+          <div class="process-tag">📊 Market Research</div>
+        </div>
+
+        <div class="process-card fade-in">
+          <div class="process-step">Step — 03</div>
+          <h3>Campaign Setup & Content Creation</h3>
+          <p>Creating compelling content, visuals and campaigns that capture attention and drive engagement.</p>
+          <div class="process-tag">✨ Captivating Visuals</div>
+        </div>
+
+        <div class="process-card fade-in">
+          <div class="process-step">Step — 04</div>
+          <h3>Executing Campaigns, AI Integration & Promotion</h3>
+          <p>Launching performance-driven campaigns with AI tools for maximum reach and targeted results.</p>
+          <div class="process-tag">🤖 Performance Driven SEO</div>
+        </div>
+
+        <div class="process-card fade-in process-card-center">
+          <div class="process-step">Step — 05</div>
+          <h3>Monitoring, Optimization & Improvement</h3>
+          <p>Continuously tracking performance, A/B testing and optimizing for better results every day.</p>
+          <div class="process-tag">📈 Optimization</div>
+        </div>
+
+        <div class="process-card fade-in">
+          <div class="process-step">Step — 06</div>
+          <h3>Reporting Results & Client Support</h3>
+          <p>Detailed reports, transparent communication and ongoing support to ensure your success.</p>
+          <div class="process-tag">📋 Final Output</div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <section class="testimonials-section" id="testimonials">
+    <div class="testimonials-container">
+      <div class="section-tag">Testimonials</div>
+      <h2>What Our <span>Clients Say</span></h2>
+      <p class="section-subtitle">Real feedback from real people who trust us</p>
+      <div class="testimonials-grid">
+
+        <div class="testimonial-card fade-in">
+          <div class="stars">⭐⭐⭐⭐⭐</div>
+          <p class="testimonial-text">"LiveSphere completely transformed our online presence. The website they built is fast, beautiful and easy to use. Highly recommended!"</p>
+          <div class="testimonial-author">
+            <div class="author-avatar">RK</div>
+            <div class="author-info">
+              <h4>Rahman Khan</h4>
+              <span>CEO, TechBD</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="testimonial-card fade-in featured-testimonial">
+          <div class="stars">⭐⭐⭐⭐⭐</div>
+          <p class="testimonial-text">"The team at LiveSphere is incredibly talented. They delivered our project on time and exceeded all expectations. Will definitely work with them again!"</p>
+          <div class="testimonial-author">
+            <div class="author-avatar">SA</div>
+            <div class="author-info">
+              <h4>Sadia Ahmed</h4>
+              <span>Founder, ShopNow</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="testimonial-card fade-in">
+          <div class="stars">⭐⭐⭐⭐⭐</div>
+          <p class="testimonial-text">"Professional, responsive and highly skilled. LiveSphere helped us rank on the first page of Google within just 3 months. Amazing results!"</p>
+          <div class="testimonial-author">
+            <div class="author-avatar">MH</div>
+            <div class="author-info">
+              <h4>Mehedi Hasan</h4>
+              <span>Marketing Head, DigiCo</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="testimonial-card fade-in">
+          <div class="stars">⭐⭐⭐⭐⭐</div>
+          <p class="testimonial-text">"Fantastic experience from start to finish. The app they developed for us is smooth, modern and our users absolutely love it!"</p>
+          <div class="testimonial-author">
+            <div class="author-avatar">FI</div>
+            <div class="author-info">
+              <h4>Farhan Islam</h4>
+              <span>CTO, AppVenture</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="testimonial-card fade-in">
+          <div class="stars">⭐⭐⭐⭐⭐</div>
+          <p class="testimonial-text">"Their digital marketing strategy doubled our sales in just 2 months. The ROI has been incredible. Best investment we've made for our business!"</p>
+          <div class="testimonial-author">
+            <div class="author-avatar">NR</div>
+            <div class="author-info">
+              <h4>Nadia Rahman</h4>
+              <span>Owner, StyleBD</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="testimonial-card fade-in">
+          <div class="stars">⭐⭐⭐⭐⭐</div>
+          <p class="testimonial-text">"World class service and support. They were available 24/7 during our launch and made sure everything went perfectly. Truly outstanding team!"</p>
+          <div class="testimonial-author">
+            <div class="author-avatar">KA</div>
+            <div class="author-info">
+              <h4>Karim Ahsan</h4>
+              <span>Director, MediaPro</span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <section class="portfolio-section" id="portfolio">
+    <div class="portfolio-container">
+      <div class="section-tag">Our Work</div>
+      <h2>Recent <span>Projects</span></h2>
+      <p class="section-subtitle">Some of our best work for amazing clients</p>
+
+      <div class="portfolio-filters">
+        <button class="filter-btn active" data-filter="all">All</button>
+        <button class="filter-btn" data-filter="web">Web Design</button>
+        <button class="filter-btn" data-filter="app">App Dev</button>
+        <button class="filter-btn" data-filter="seo">SEO</button>
+        <button class="filter-btn" data-filter="marketing">Marketing</button>
+      </div>
+
+      <div class="portfolio-grid" id="portfolioGrid">
+
+        <div class="portfolio-item fade-in" data-category="web">
+          <div class="portfolio-img" style="background-image: url('https://images.unsplash.com/photo-1547658719-da2b51169166?w=600&q=80'); background-size:cover; background-position:center;"></div>
+          <div class="portfolio-overlay">
+            <h3>E-Commerce Website</h3>
+            <span>Web Design</span>
+            <a href="#contact" class="portfolio-link">View Project →</a>
+          </div>
+        </div>
+
+        <div class="portfolio-item fade-in" data-category="app">
+          <div class="portfolio-img" style="background-image: url('https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?w=600&q=80'); background-size:cover; background-position:center;"></div>
+          <div class="portfolio-overlay">
+            <h3>Food Delivery App</h3>
+            <span>App Development</span>
+            <a href="#contact" class="portfolio-link">View Project →</a>
+          </div>
+        </div>
+
+        <div class="portfolio-item fade-in" data-category="seo">
+          <div class="portfolio-img" style="background-image: url('https://images.unsplash.com/photo-1562577309-4932fdd64cd1?w=600&q=80'); background-size:cover; background-position:center;"></div>
+          <div class="portfolio-overlay">
+            <h3>SEO Campaign</h3>
+            <span>SEO Optimization</span>
+            <a href="#contact" class="portfolio-link">View Project →</a>
+          </div>
+        </div>
+
+        <div class="portfolio-item fade-in" data-category="marketing">
+          <div class="portfolio-img" style="background-image: url('https://images.unsplash.com/photo-1611162617474-5b21e879e113?w=600&q=80'); background-size:cover; background-position:center;"></div>
+          <div class="portfolio-overlay">
+            <h3>Social Media Campaign</h3>
+            <span>Digital Marketing</span>
+            <a href="#contact" class="portfolio-link">View Project →</a>
+          </div>
+        </div>
+
+        <div class="portfolio-item fade-in" data-category="web">
+          <div class="portfolio-img" style="background-image: url('https://images.unsplash.com/photo-1497366216548-37526070297c?w=600&q=80'); background-size:cover; background-position:center;"></div>
+          <div class="portfolio-overlay">
+            <h3>Corporate Website</h3>
+            <span>Web Design</span>
+            <a href="#contact" class="portfolio-link">View Project →</a>
+          </div>
+        </div>
+
+        <div class="portfolio-item fade-in" data-category="app">
+          <div class="portfolio-img" style="background-image: url('https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=600&q=80'); background-size:cover; background-position:center;"></div>
+          <div class="portfolio-overlay">
+            <h3>Fitness Tracker App</h3>
+            <span>App Development</span>
+            <a href="#contact" class="portfolio-link">View Project →</a>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <section class="pricing-section" id="pricing">
+    <div class="pricing-container">
+      <div class="section-tag">Pricing</div>
+      <h2>Simple & Transparent <span>Pricing</span></h2>
+      <p class="section-subtitle">Choose the plan that works best for you</p>
+
+      <div class="pricing-grid">
+
+        <div class="pricing-card fade-in">
+          <div class="pricing-header">
+            <div class="pricing-icon">🌱</div>
+            <h3>Starter</h3>
+            <p>Perfect for small businesses</p>
+          </div>
+          <div class="pricing-price">
+            <span class="currency">$</span>
+            <span class="amount">29</span>
+            <span class="period">/month</span>
+          </div>
+          <ul class="pricing-features">
+            <li class="included">✅ 1 Website</li>
+            <li class="included">✅ 5 Pages</li>
+            <li class="included">✅ Basic SEO</li>
+            <li class="included">✅ Mobile Responsive</li>
+            <li class="excluded">❌ Custom Domain</li>
+            <li class="excluded">❌ E-Commerce</li>
+            <li class="excluded">❌ 24/7 Support</li>
+          </ul>
+          <a href="#contact" class="btn pricing-btn">Get Started</a>
+        </div>
+
+        <div class="pricing-card featured-pricing fade-in">
+          <div class="popular-badge">🔥 Most Popular</div>
+          <div class="pricing-header">
+            <div class="pricing-icon">🚀</div>
+            <h3>Professional</h3>
+            <p>Best for growing businesses</p>
+          </div>
+          <div class="pricing-price">
+            <span class="currency">$</span>
+            <span class="amount">79</span>
+            <span class="period">/month</span>
+          </div>
+          <ul class="pricing-features">
+            <li class="included">✅ 3 Websites</li>
+            <li class="included">✅ Unlimited Pages</li>
+            <li class="included">✅ Advanced SEO</li>
+            <li class="included">✅ Mobile Responsive</li>
+            <li class="included">✅ Custom Domain</li>
+            <li class="included">✅ E-Commerce Ready</li>
+            <li class="excluded">❌ 24/7 Support</li>
+          </ul>
+          <a href="#contact" class="btn pricing-btn">Get Started</a>
+        </div>
+
+        <div class="pricing-card fade-in">
+          <div class="pricing-header">
+            <div class="pricing-icon">💎</div>
+            <h3>Enterprise</h3>
+            <p>For large scale businesses</p>
+          </div>
+          <div class="pricing-price">
+            <span class="currency">$</span>
+            <span class="amount">149</span>
+            <span class="period">/month</span>
+          </div>
+          <ul class="pricing-features">
+            <li class="included">✅ Unlimited Websites</li>
+            <li class="included">✅ Unlimited Pages</li>
+            <li class="included">✅ Full SEO Suite</li>
+            <li class="included">✅ Mobile Responsive</li>
+            <li class="included">✅ Custom Domain</li>
+            <li class="included">✅ E-Commerce Ready</li>
+            <li class="included">✅ 24/7 Support</li>
+          </ul>
+          <a href="#contact" class="btn pricing-btn">Get Started</a>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <div id="toast-container"></div>
+
+  <div class="favorites-panel" id="favPanel">
+    <h4>❤️ Saved Services <span onclick="toggleFavPanel()" style="cursor:pointer;font-weight:300;float:right;">✕</span></h4>
+    <div id="favItems"></div>
+  </div>
+
+  <button class="fav-toggle-btn" id="favToggleBtn" onclick="toggleFavPanel()">❤️ Favorites</button>
+
+  <section class="faq-section" id="faq">
+    <div class="faq-container">
+      <div class="section-tag">FAQ</div>
+      <h2>Frequently Asked <span>Questions</span></h2>
+      <p class="section-subtitle">Got questions? We have answers.</p>
+
+      <div class="faq-list">
+
+        <div class="faq-item">
+          <div class="faq-question">
+            <span>How long does it take to build a website?</span>
+            <span class="faq-icon">+</span>
+          </div>
+          <div class="faq-answer">
+            <p>Typically, a standard website takes 2–4 weeks. More complex projects like e-commerce or custom web apps may take 6–12 weeks depending on requirements.</p>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <div class="faq-question">
+            <span>Do you offer post-launch support?</span>
+            <span class="faq-icon">+</span>
+          </div>
+          <div class="faq-answer">
+            <p>Yes! We offer 3 months of free support after launch. After that, you can choose one of our maintenance plans to keep your site updated and secure.</p>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <div class="faq-question">
+            <span>Will my website be mobile friendly?</span>
+            <span class="faq-icon">+</span>
+          </div>
+          <div class="faq-answer">
+            <p>Absolutely! All websites we build are fully responsive and optimized for mobile, tablet and desktop devices.</p>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <div class="faq-question">
+            <span>Can I update the website content myself?</span>
+            <span class="faq-icon">+</span>
+          </div>
+          <div class="faq-answer">
+            <p>Yes! We build websites with easy-to-use content management systems (CMS) so you can update text, images and other content without any coding knowledge.</p>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <div class="faq-question">
+            <span>What payment methods do you accept?</span>
+            <span class="faq-icon">+</span>
+          </div>
+          <div class="faq-answer">
+            <p>We accept bKash, Nagad, bank transfer and all major credit/debit cards. We also offer flexible payment plans for larger projects.</p>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <div class="faq-question">
+            <span>Do you offer SEO services with web design?</span>
+            <span class="faq-icon">+</span>
+          </div>
+          <div class="faq-answer">
+            <p>Yes! Every website we build is SEO-ready from day one. We also offer dedicated SEO packages to help you rank higher on Google and drive more organic traffic.</p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <section class="form-section" id="contact">
+    <div class="form-wrapper">
+      <div class="form-info fade-in">
+        <div class="section-tag">Contact</div>
+        <h2>Let's Work <span>Together</span></h2>
+        <p>Have a project in mind? Fill out the form and we'll get back to you within 24 hours.</p>
+        <div class="contact-details">
+          <div class="contact-item">
+            <div class="contact-icon">📍</div>
+            <div>
+              <h4>Location</h4>
+              <p>Dhaka, Bangladesh</p>
+            </div>
+          </div>
+          <div class="contact-item">
+            <div class="contact-icon">📞</div>
+            <div>
+              <h4>Phone</h4>
+              <p>+880 1234 567890</p>
+            </div>
+          </div>
+          <div class="contact-item">
+            <div class="contact-icon">✉️</div>
+            <div>
+              <h4>Email</h4>
+              <p>hello@livesphere.com</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="form-container fade-in">
+        <div class="submission-history" id="submissionHistory"></div>
+        <form id="contactForm" novalidate>
+          <div class="form-row">
+            <div class="form-group">
+              <label for="fullname">Full Name</label>
+              <input type="text" id="fullname" placeholder="Your full name" />
+              <span class="error" id="nameError"></span>
+            </div>
+            <div class="form-group">
+              <label for="email">Email Address</label>
+              <input type="email" id="email" placeholder="your@email.com" />
+              <span class="error" id="emailError"></span>
+            </div>
+          </div>
+
+          <div class="form-row">
+            <div class="form-group">
+              <label for="phone">Phone Number</label>
+              <input type="tel" id="phone" placeholder="01XXXXXXXXX" />
+              <span class="error" id="phoneError"></span>
+            </div>
+            <div class="form-group">
+              <label for="country">Country</label>
+              <select id="country">
+                <option value="">-- Select Country --</option>
+                <option value="bd">Bangladesh</option>
+                <option value="in">India</option>
+                <option value="us">United States</option>
+                <option value="uk">United Kingdom</option>
+                <option value="ca">Canada</option>
+              </select>
+              <span class="error" id="countryError"></span>
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label for="service">Service Needed</label>
+            <select id="service">
+              <option value="">-- Select Service --</option>
+              <option value="web">Web Design</option>
+              <option value="app">App Development</option>
+              <option value="seo">SEO Optimization</option>
+              <option value="marketing">Digital Marketing</option>
+            </select>
+            <span class="error" id="serviceError"></span>
+          </div>
+
+          <div class="form-group">
+            <label>Gender</label>
+            <div class="radio-group">
+              <label class="radio-label"><input type="radio" name="gender" value="male" /> Male</label>
+              <label class="radio-label"><input type="radio" name="gender" value="female" /> Female</label>
+              <label class="radio-label"><input type="radio" name="gender" value="other" /> Other</label>
+            </div>
+            <span class="error" id="genderError"></span>
+          </div>
+
+          <div class="form-group">
+            <label>Interests</label>
+            <div class="checkbox-group">
+              <label class="check-label"><input type="checkbox" value="design" /> 🎨 Design</label>
+              <label class="check-label"><input type="checkbox" value="coding" /> 💻 Coding</label>
+              <label class="check-label"><input type="checkbox" value="marketing" /> 📣 Marketing</label>
+              <label class="check-label"><input type="checkbox" value="business" /> 💼 Business</label>
+            </div>
+            <span class="error" id="interestError"></span>
+          </div>
+
+          <div class="form-group">
+            <label for="message">Message</label>
+            <textarea id="message" rows="4" placeholder="Tell us about your project..."></textarea>
+            <span class="error" id="messageError"></span>
+          </div>
+
+          <button type="submit" class="btn submit-btn">
+            <span id="btnText">Send Message 🚀</span>
+          </button>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <div class="modal" id="successModal">
+    <div class="modal-box">
+      <div class="modal-icon">🎉</div>
+      <h3>Message Sent!</h3>
+      <p>Thank you for reaching out. We'll get back to you within 24 hours.</p>
+      <button class="btn" onclick="closeModal()">Close</button>
+    </div>
+  </div>
+
+  <section class="newsletter-section" id="newsletter">
+    <div class="newsletter-container">
+      <div class="newsletter-content">
+        <div class="newsletter-icon">📧</div>
+        <h2>Stay in the <span>Loop</span></h2>
+        <p>Subscribe to our newsletter and get the latest updates, tips and offers directly in your inbox.</p>
+        <div class="newsletter-form" id="newsletterForm">
+          <input type="email" id="newsletterEmail" placeholder="Enter your email address..." />
+          <button onclick="subscribeNewsletter()" class="btn">Subscribe 🚀</button>
+        </div>
+        <p class="newsletter-note" id="newsletterNote"></p>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="footer-container">
+      <div class="footer-brand">
+        <h3>🌐 LiveSphere</h3>
+        <p>Building real-life, user-friendly web solutions for businesses of all sizes around the world.</p>
+        <div class="social-links">
+          <a href="#">📘</a>
+          <a href="#">🐦</a>
+          <a href="#">💼</a>
+          <a href="#">📸</a>
+        </div>
+      </div>
+      <div class="footer-links">
+        <h4>Quick Links</h4>
+        <ul>
+          <li><a href="#home">Home</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#services">Services</a></li>
+          <li><a href="#testimonials">Testimonials</a></li>
+          <li><a href="#portfolio">Portfolio</a></li>
+          <li><a href="#pricing">Pricing</a></li>
+          <li><a href="#faq">FAQ</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </div>
+      <div class="footer-links">
+        <h4>Services</h4>
+        <ul>
+          <li><a href="#services">Web Design</a></li>
+          <li><a href="#services">App Development</a></li>
+          <li><a href="#services">SEO Optimization</a></li>
+          <li><a href="#services">Digital Marketing</a></li>
+        </ul>
+      </div>
+      <div class="footer-contact">
+        <h4>Contact Info</h4>
+        <p>📍 Dhaka, Bangladesh</p>
+        <p>📞 +880 1234 567890</p>
+        <p>✉️ hello@livesphere.com</p>
+        <p>🕐 Mon - Fri: 9am - 6pm</p>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p id="footerCopy">&copy; 2025 LiveSphere. All rights reserved. Built with ❤️</p>
+      <a href="#home" class="back-to-top">⬆ Back to Top</a>
+    </div>
+  </footer>
+
+  <div class="admin-overlay" id="adminOverlay">
+    <div class="admin-login-popup" id="adminLoginPopup">
+      <button class="admin-popup-close" onclick="closeAdminPanel()">✕</button>
+      <div class="admin-login-logo">🔐 Admin Access</div>
+      <h3>LiveSphere Admin</h3>
+      <p>Enter your credentials to continue</p>
+      <div class="admin-login-form">
+        <div class="admin-login-group">
+          <label>Username</label>
+          <input type="text" id="adminUser" placeholder="Enter username" />
+        </div>
+        <div class="admin-login-group">
+          <label>Password</label>
+          <div class="admin-pass-wrap">
+            <input type="password" id="adminPass" placeholder="Enter password" />
+            <span onclick="toggleAdminPass()">👁️</span>
+          </div>
+        </div>
+        <p class="admin-login-error" id="adminLoginError"></p>
+        <button class="admin-login-btn" onclick="doAdminLogin()">Login →</button>
+      </div>
+    </div>
+  </div>
+
+  <div class="admin-panel-section" id="adminPanelSection">
+    <div class="admin-panel-inner">
+
+      <div class="admin-panel-header">
+        <div class="admin-panel-title">
+          <span>🔐</span>
+          <h2>Admin Panel</h2>
+          <span class="admin-live-badge">● LIVE</span>
+        </div>
+        <div class="admin-panel-header-right">
+          <span class="admin-panel-time" id="adminPanelTime"></span>
+          <button class="admin-logout-btn" onclick="doAdminLogout()">🚪 Logout</button>
+        </div>
+      </div>
+
+      <div class="admin-tabs">
+        <button class="admin-tab active" onclick="switchAdminTab('dashboard', this)">📊 Dashboard</button>
+        <button class="admin-tab" onclick="switchAdminTab('submissions', this)">📋 Submissions</button>
+        <button class="admin-tab" onclick="switchAdminTab('subscribers', this)">📧 Subscribers</button>
+        <button class="admin-tab" onclick="switchAdminTab('favorites', this)">❤️ Favorites</button>
+        <button class="admin-tab" onclick="switchAdminTab('analytics', this)">📈 Analytics</button>
+      </div>
+
+      <div class="admin-tab-body">
+
+        <div class="admin-tab-content active" id="atab-dashboard">
+          <div class="admin-stats-grid">
+            <div class="admin-stat-card asc-blue">
+              <div class="asc-icon">📋</div>
+              <div class="asc-info">
+                <h3 id="aTotalSub">0</h3>
+                <p>Submissions</p>
+              </div>
+            </div>
+            <div class="admin-stat-card asc-green">
+              <div class="asc-icon">📧</div>
+              <div class="asc-info">
+                <h3 id="aTotalNews">0</h3>
+                <p>Subscribers</p>
+              </div>
+            </div>
+            <div class="admin-stat-card asc-red">
+              <div class="asc-icon">👁️</div>
+              <div class="asc-info">
+                <h3 id="aTotalVisits">0</h3>
+                <p>Total Visits</p>
+              </div>
+            </div>
+            <div class="admin-stat-card asc-purple">
+              <div class="asc-icon">❤️</div>
+              <div class="asc-info">
+                <h3 id="aTotalFavs">0</h3>
+                <p>Saved Services</p>
+              </div>
+            </div>
+          </div>
+          <div class="admin-dash-grid">
+            <div class="admin-dash-card">
+              <div class="admin-dash-card-header">
+                <h4>📋 Recent Submissions</h4>
+                <button class="adc-view-btn" onclick="switchAdminTab('submissions', null)">View All</button>
+              </div>
+              <div id="aRecentSubs"></div>
+            </div>
+            <div class="admin-dash-card">
+              <div class="admin-dash-card-header">
+                <h4>❤️ Popular Services</h4>
+              </div>
+              <div id="aPopularServices"></div>
+            </div>
+          </div>
+        </div>
+
+        <div class="admin-tab-content" id="atab-submissions">
+          <div class="admin-section-header">
+            <h4>📋 All Form Submissions</h4>
+            <div class="admin-section-actions">
+              <input type="text" id="aSearchInput" placeholder="🔍 Search..." oninput="aFilterSubs()" class="a-search" />
+              <button class="a-export-btn" onclick="aExportCSV()">📥 CSV</button>
+              <button class="a-clear-btn" onclick="aClearSubs()">🗑️ Clear</button>
+            </div>
+          </div>
+          <div class="a-table-wrap">
+            <table class="a-table">
+              <thead>
+                <tr>
+                  <th>#</th>
+                  <th>Name</th>
+                  <th>Service</th>
+                  <th>Date</th>
+                  <th>Time</th>
+                  <th>Action</th>
+                </tr>
+              </thead>
+              <tbody id="aSubsBody"></tbody>
+            </table>
+            <p class="a-empty" id="aNoSubs">No submissions yet.</p>
+          </div>
+        </div>
+
+        <div class="admin-tab-content" id="atab-subscribers">
+          <div class="admin-section-header">
+            <h4>📧 Newsletter Subscribers</h4>
+            <div class="admin-section-actions">
+              <button class="a-export-btn" onclick="aExportSubscribers()">📥 Export</button>
+              <button class="a-clear-btn" onclick="aClearSubscribers()">🗑️ Clear</button>
+            </div>
+          </div>
+          <div id="aSubscribersList"></div>
+        </div>
+
+        <div class="admin-tab-content" id="atab-favorites">
+          <div class="admin-section-header">
+            <h4>❤️ Saved Services</h4>
+          </div>
+          <div id="aFavoritesList"></div>
+        </div>
+
+        <div class="admin-tab-content" id="atab-analytics">
+          <div class="admin-section-header">
+            <h4>📈 Analytics</h4>
+            <button class="a-clear-btn" onclick="aClearVisits()">🗑️ Reset Visits</button>
+          </div>
+          <div class="a-analytics-grid">
+            <div class="a-analytics-stat">
+              <h2 id="aVisitCount">0</h2>
+              <p>Total Visits</p>
+            </div>
+            <div class="a-analytics-stat">
+              <h2 id="aSubCount">0</h2>
+              <p>Subscribers</p>
+            </div>
+            <div class="a-analytics-stat">
+              <h2 id="aFormCount">0</h2>
+              <p>Submissions</p>
+            </div>
+          </div>
+          <div class="a-chart-wrap">
+            <h4>Service Popularity</h4>
+            <div id="aServiceChart"></div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+  <script src="js/script.js"></script>
+</body>
+</html>
+
